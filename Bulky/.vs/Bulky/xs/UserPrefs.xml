@@ -1,27 +1,21 @@
-﻿<Properties StartupConfiguration="{85FBD5E0-4CDD-4C25-9B21-848288FAA26B}|https">
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.BulkyWeb FirstBuild="True" PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="BulkyWeb/Controllers/HomeController.cs">
-    <Files>
-      <File FileName="BulkyWeb/Controllers/HomeController.cs" Line="1" Column="1" />
-    </Files>
+﻿<Properties StartupConfiguration="{28005F14-E251-4689-A624-55FD5ECD9F5C}|https">
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Bulky" selected="True">
-            <Node name="BulkyWeb" expanded="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Views" expanded="True" />
-              <Node name="wwwroot" expanded="True" />
-            </Node>
+          <Node name="Bulky" expanded="True">
+            <Node name="BulkyWebRazor_Temp" selected="True" />
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.BulkyWebRazor__Temp PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.BulkyWeb PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
