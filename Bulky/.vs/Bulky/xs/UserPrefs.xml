@@ -1,21 +1,35 @@
 ﻿<Properties StartupConfiguration="{28005F14-E251-4689-A624-55FD5ECD9F5C}|https">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="BulkyWebRazor_Temp/Pages/Categories/Index.cshtml">
+    <Files>
+      <File FileName="BulkyWeb/Views/Category/Create.cshtml" Line="1" Column="1" />
+      <File FileName="BulkyWebRazor_Temp/Pages/Categories/Index.cshtml" Line="1" Column="1" />
+      <File FileName="BulkyWebRazor_Temp/Pages/Categories/Index.cshtml.cs" Line="1" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Bulky" expanded="True">
-            <Node name="BulkyWebRazor_Temp" selected="True" />
+            <Node name="BulkyWebRazor_Temp">
+              <Node name="Data" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Pages" expanded="True">
+                <Node name="Categories" expanded="True">
+                  <Node name="Index.cshtml" expanded="True" selected="True" />
+                </Node>
+                <Node name="Index.cshtml" expanded="True" />
+              </Node>
+            </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.BulkyWebRazor__Temp PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.BulkyWebRazor__Temp PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.BulkyWeb PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
