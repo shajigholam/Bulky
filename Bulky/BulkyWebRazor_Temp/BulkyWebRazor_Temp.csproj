@@ -27,10 +27,4 @@
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.12" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Pages\Categories\Create.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Pages\Categories\Create.cshtml.cs" />
-  </ItemGroup>
 </Project>
