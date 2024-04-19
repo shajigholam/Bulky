@@ -1,21 +1,30 @@
-﻿<Properties StartupConfiguration="{28005F14-E251-4689-A624-55FD5ECD9F5C}|https">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+﻿<Properties StartupConfiguration="{85FBD5E0-4CDD-4C25-9B21-848288FAA26B}|https">
+  <MonoDevelop.Ide.ItemProperties.BulkyWeb PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="BulkyWebRazor_Temp/Pages/Categories/Create.cshtml.cs">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Bulky.DataAccess/Data/ApplicationDbContext.cs">
     <Files>
-      <File FileName="BulkyWebRazor_Temp/Pages/Categories/Create.cshtml" Line="30" Column="19" />
-      <File FileName="BulkyWebRazor_Temp/Pages/Categories/Create.cshtml.cs" Line="23" Column="10" />
+      <File FileName="Bulky.Models/Category.cs" Line="1" Column="1" />
+      <File FileName="Bulky.DataAccess/Data/ApplicationDbContext.cs" Line="13" Column="1" />
+      <File FileName="BulkyWeb/Program.cs" Line="9" Column="63" />
+      <File FileName="BulkyWeb/appsettings.json" Line="13" Column="46" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Bulky" expanded="True">
-            <Node name="BulkyWebRazor_Temp" selected="True">
-              <Node name="Pages" expanded="True">
-                <Node name="Categories" expanded="True">
-                  <Node name="Create.cshtml" expanded="True" />
-                  <Node name="Index.cshtml" expanded="True" />
-                </Node>
+            <Node name="Bulky.DataAccess" expanded="True">
+              <Node name="Data" expanded="True">
+                <Node name="ApplicationDbContext.cs" selected="True" />
+              </Node>
+            </Node>
+            <Node name="Bulky.Models" expanded="True" />
+            <Node name="BulkyWeb">
+              <Node name="Views">
                 <Node name="Shared" expanded="True" />
               </Node>
             </Node>
@@ -25,7 +34,4 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.BulkyWebRazor__Temp PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.BulkyWeb PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>
