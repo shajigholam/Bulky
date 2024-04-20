@@ -8,8 +8,9 @@ using Bulky.DataAccess.Repository.IRepository;
 using Bulky.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BulkyWeb.Controllers
+namespace BulkyWeb.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class CategoryController : Controller
     {
         // injecting IUnitOfWork, which acts as a higher-level abstraction that encapsulates one or more repositories.
@@ -54,7 +55,7 @@ namespace BulkyWeb.Controllers
                 return RedirectToAction("Index");
             }
             return View();
-            
+
         }
 
         public IActionResult Edit(int? id)

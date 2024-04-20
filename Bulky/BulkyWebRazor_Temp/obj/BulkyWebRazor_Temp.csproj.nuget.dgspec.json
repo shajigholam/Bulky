@@ -1,26 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "/Users/samanehhajigholam/Library/CloudStorage/OneDrive-Seneca/Desktop/clone-github/Bulky/Bulky/BulkyWebRazor_Temp/BulkyWebRazor_Temp.csproj": {}
+    "C:\\Users\\hreih\\Source\\Repos\\Bulky\\Bulky\\BulkyWebRazor_Temp\\BulkyWebRazor_Temp.csproj": {}
   },
   "projects": {
-    "/Users/samanehhajigholam/Library/CloudStorage/OneDrive-Seneca/Desktop/clone-github/Bulky/Bulky/BulkyWebRazor_Temp/BulkyWebRazor_Temp.csproj": {
+    "C:\\Users\\hreih\\Source\\Repos\\Bulky\\Bulky\\BulkyWebRazor_Temp\\BulkyWebRazor_Temp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/samanehhajigholam/Library/CloudStorage/OneDrive-Seneca/Desktop/clone-github/Bulky/Bulky/BulkyWebRazor_Temp/BulkyWebRazor_Temp.csproj",
+        "projectUniqueName": "C:\\Users\\hreih\\Source\\Repos\\Bulky\\Bulky\\BulkyWebRazor_Temp\\BulkyWebRazor_Temp.csproj",
         "projectName": "BulkyWebRazor_Temp",
-        "projectPath": "/Users/samanehhajigholam/Library/CloudStorage/OneDrive-Seneca/Desktop/clone-github/Bulky/Bulky/BulkyWebRazor_Temp/BulkyWebRazor_Temp.csproj",
-        "packagesPath": "/Users/samanehhajigholam/.nuget/packages/",
-        "outputPath": "/Users/samanehhajigholam/Library/CloudStorage/OneDrive-Seneca/Desktop/clone-github/Bulky/Bulky/BulkyWebRazor_Temp/obj/",
+        "projectPath": "C:\\Users\\hreih\\Source\\Repos\\Bulky\\Bulky\\BulkyWebRazor_Temp\\BulkyWebRazor_Temp.csproj",
+        "packagesPath": "C:\\Users\\hreih\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hreih\\Source\\Repos\\Bulky\\Bulky\\BulkyWebRazor_Temp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/samanehhajigholam/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\hreih\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/sdk/7.0.315/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -77,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.315/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     }

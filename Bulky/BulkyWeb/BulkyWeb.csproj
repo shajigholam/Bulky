@@ -21,7 +21,8 @@
     <None Remove="Views\Category\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\Category\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Areas\Admin\Views\Category\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Bulky.DataAccess\Bulky.DataAccess.csproj">
