@@ -11,8 +11,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Add CategoryRepository in the dependency inj - using add scoped lifetime(for 1 request it will use the same service)
-builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+// Add UnitOfWork in the dependency inj - using add scoped lifetime(for 1 request it will use the same service)
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 
 var app = builder.Build();
