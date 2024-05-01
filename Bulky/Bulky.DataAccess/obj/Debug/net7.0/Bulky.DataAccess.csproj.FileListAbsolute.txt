@@ -11,9 +11,10 @@
 /Users/samanehhajigholam/Library/CloudStorage/OneDrive-Seneca/Desktop/clone-github/Bulky/Bulky/Bulky.DataAccess/obj/Debug/net7.0/Bulky.DataAccess.AssemblyInfoInputs.cache
 /Users/samanehhajigholam/Library/CloudStorage/OneDrive-Seneca/Desktop/clone-github/Bulky/Bulky/Bulky.DataAccess/obj/Debug/net7.0/Bulky.DataAccess.AssemblyInfo.cs
 /Users/samanehhajigholam/Library/CloudStorage/OneDrive-Seneca/Desktop/clone-github/Bulky/Bulky/Bulky.DataAccess/obj/Debug/net7.0/Bulky.DataAccess.csproj.CoreCompileInputs.cache
-/Users/samanehhajigholam/Library/CloudStorage/OneDrive-Seneca/Desktop/clone-github/Bulky/Bulky/Bulky.DataAccess/obj/Debug/net7.0/Bulky.DataAccess.csproj.CopyComplete
 /Users/samanehhajigholam/Library/CloudStorage/OneDrive-Seneca/Desktop/clone-github/Bulky/Bulky/Bulky.DataAccess/obj/Debug/net7.0/Bulky.DataAccess.dll
 /Users/samanehhajigholam/Library/CloudStorage/OneDrive-Seneca/Desktop/clone-github/Bulky/Bulky/Bulky.DataAccess/obj/Debug/net7.0/refint/Bulky.DataAccess.dll
 /Users/samanehhajigholam/Library/CloudStorage/OneDrive-Seneca/Desktop/clone-github/Bulky/Bulky/Bulky.DataAccess/obj/Debug/net7.0/Bulky.DataAccess.pdb
 /Users/samanehhajigholam/Library/CloudStorage/OneDrive-Seneca/Desktop/clone-github/Bulky/Bulky/Bulky.DataAccess/obj/Debug/net7.0/Bulky.DataAccess.genruntimeconfig.cache
 /Users/samanehhajigholam/Library/CloudStorage/OneDrive-Seneca/Desktop/clone-github/Bulky/Bulky/Bulky.DataAccess/obj/Debug/net7.0/ref/Bulky.DataAccess.dll
+/Users/samanehhajigholam/Library/CloudStorage/OneDrive-Seneca/Desktop/clone-github/Bulky/Bulky/Bulky.DataAccess/obj/Debug/net7.0/Bulky.DataAccess.sourcelink.json
+/Users/samanehhajigholam/Library/CloudStorage/OneDrive-Seneca/Desktop/clone-github/Bulky/Bulky/Bulky.DataAccess/obj/Debug/net7.0/Bulky.Da.6DBD1FC4.Up2Date

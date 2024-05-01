@@ -3886,7 +3886,8 @@
           "Bulky.Models": "1.0.0",
           "Bulky.Utility": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.18",
-          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.18"
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.18",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "7.0.12"
         },
         "compile": {
           "bin/placeholder/Bulky.DataAccess.dll": {}

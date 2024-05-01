@@ -1,7 +1,6 @@
 /Users/samanehhajigholam/Library/CloudStorage/OneDrive-Seneca/Desktop/clone-github/Bulky/Bulky/Bulky.Utility/bin/Debug/net7.0/Bulky.Utility.deps.json
 /Users/samanehhajigholam/Library/CloudStorage/OneDrive-Seneca/Desktop/clone-github/Bulky/Bulky/Bulky.Utility/bin/Debug/net7.0/Bulky.Utility.dll
 /Users/samanehhajigholam/Library/CloudStorage/OneDrive-Seneca/Desktop/clone-github/Bulky/Bulky/Bulky.Utility/bin/Debug/net7.0/Bulky.Utility.pdb
-/Users/samanehhajigholam/Library/CloudStorage/OneDrive-Seneca/Desktop/clone-github/Bulky/Bulky/Bulky.Utility/obj/Debug/net7.0/Bulky.Utility.csproj.AssemblyReference.cache
 /Users/samanehhajigholam/Library/CloudStorage/OneDrive-Seneca/Desktop/clone-github/Bulky/Bulky/Bulky.Utility/obj/Debug/net7.0/Bulky.Utility.GeneratedMSBuildEditorConfig.editorconfig
 /Users/samanehhajigholam/Library/CloudStorage/OneDrive-Seneca/Desktop/clone-github/Bulky/Bulky/Bulky.Utility/obj/Debug/net7.0/Bulky.Utility.AssemblyInfoInputs.cache
 /Users/samanehhajigholam/Library/CloudStorage/OneDrive-Seneca/Desktop/clone-github/Bulky/Bulky/Bulky.Utility/obj/Debug/net7.0/Bulky.Utility.AssemblyInfo.cs
@@ -10,3 +9,4 @@
 /Users/samanehhajigholam/Library/CloudStorage/OneDrive-Seneca/Desktop/clone-github/Bulky/Bulky/Bulky.Utility/obj/Debug/net7.0/refint/Bulky.Utility.dll
 /Users/samanehhajigholam/Library/CloudStorage/OneDrive-Seneca/Desktop/clone-github/Bulky/Bulky/Bulky.Utility/obj/Debug/net7.0/Bulky.Utility.pdb
 /Users/samanehhajigholam/Library/CloudStorage/OneDrive-Seneca/Desktop/clone-github/Bulky/Bulky/Bulky.Utility/obj/Debug/net7.0/ref/Bulky.Utility.dll
+/Users/samanehhajigholam/Library/CloudStorage/OneDrive-Seneca/Desktop/clone-github/Bulky/Bulky/Bulky.Utility/obj/Debug/net7.0/Bulky.Utility.sourcelink.json
