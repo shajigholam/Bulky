@@ -1106,22 +1106,22 @@
           "runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll": {
             "rid": "win-arm",
             "assetType": "native",
-            "fileVersion": "0.0.0.0"
+            "fileVersion": "5.1.1.0"
           },
           "runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll": {
             "rid": "win-arm64",
             "assetType": "native",
-            "fileVersion": "0.0.0.0"
+            "fileVersion": "5.1.1.0"
           },
           "runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll": {
             "rid": "win-x64",
             "assetType": "native",
-            "fileVersion": "0.0.0.0"
+            "fileVersion": "5.1.1.0"
           },
           "runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll": {
             "rid": "win-x86",
             "assetType": "native",
-            "fileVersion": "0.0.0.0"
+            "fileVersion": "5.1.1.0"
           }
         }
       },
@@ -2509,7 +2509,8 @@
           "Bulky.Models": "1.0.0",
           "Bulky.Utility": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.18",
-          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.18"
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.18",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "7.0.12"
         },
         "runtime": {
           "Bulky.DataAccess.dll": {}

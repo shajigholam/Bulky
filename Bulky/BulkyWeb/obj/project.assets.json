@@ -11347,36 +11347,38 @@
     ]
   },
   "packageFolders": {
-    "/Users/samanehhajigholam/.nuget/packages/": {}
+    "C:\\Users\\hreih\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/samanehhajigholam/Library/CloudStorage/OneDrive-Seneca/Desktop/clone-github/Bulky/Bulky/BulkyWeb/BulkyWeb.csproj",
+      "projectUniqueName": "C:\\Users\\hreih\\Source\\Repos\\Bulky\\Bulky\\BulkyWeb\\BulkyWeb.csproj",
       "projectName": "BulkyWeb",
-      "projectPath": "/Users/samanehhajigholam/Library/CloudStorage/OneDrive-Seneca/Desktop/clone-github/Bulky/Bulky/BulkyWeb/BulkyWeb.csproj",
-      "packagesPath": "/Users/samanehhajigholam/.nuget/packages/",
-      "outputPath": "/Users/samanehhajigholam/Library/CloudStorage/OneDrive-Seneca/Desktop/clone-github/Bulky/Bulky/BulkyWeb/obj/",
+      "projectPath": "C:\\Users\\hreih\\Source\\Repos\\Bulky\\Bulky\\BulkyWeb\\BulkyWeb.csproj",
+      "packagesPath": "C:\\Users\\hreih\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\hreih\\Source\\Repos\\Bulky\\Bulky\\BulkyWeb\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/samanehhajigholam/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\hreih\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "/usr/local/share/dotnet/sdk/7.0.315/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "/Users/samanehhajigholam/Library/CloudStorage/OneDrive-Seneca/Desktop/clone-github/Bulky/Bulky/Bulky.DataAccess/Bulky.DataAccess.csproj": {
-              "projectPath": "/Users/samanehhajigholam/Library/CloudStorage/OneDrive-Seneca/Desktop/clone-github/Bulky/Bulky/Bulky.DataAccess/Bulky.DataAccess.csproj"
+            "C:\\Users\\hreih\\Source\\Repos\\Bulky\\Bulky\\Bulky.DataAccess\\Bulky.DataAccess.csproj": {
+              "projectPath": "C:\\Users\\hreih\\Source\\Repos\\Bulky\\Bulky\\Bulky.DataAccess\\Bulky.DataAccess.csproj"
             },
-            "/Users/samanehhajigholam/Library/CloudStorage/OneDrive-Seneca/Desktop/clone-github/Bulky/Bulky/Bulky.Models/Bulky.Models.csproj": {
-              "projectPath": "/Users/samanehhajigholam/Library/CloudStorage/OneDrive-Seneca/Desktop/clone-github/Bulky/Bulky/Bulky.Models/Bulky.Models.csproj"
+            "C:\\Users\\hreih\\Source\\Repos\\Bulky\\Bulky\\Bulky.Models\\Bulky.Models.csproj": {
+              "projectPath": "C:\\Users\\hreih\\Source\\Repos\\Bulky\\Bulky\\Bulky.Models\\Bulky.Models.csproj"
             }
           }
         }
@@ -11429,7 +11431,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.315/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
       }
     }
   }
