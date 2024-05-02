@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hreih\\Source\\Repos\\Bulky\\Bulky\\Bulky.Models\\Bulky.Models.csproj": {}
+    "C:\\Users\\hreih\\source\\repos\\Bulky\\Bulky\\Bulky.Models\\Bulky.Models.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hreih\\Source\\Repos\\Bulky\\Bulky\\Bulky.Models\\Bulky.Models.csproj": {
+    "C:\\Users\\hreih\\source\\repos\\Bulky\\Bulky\\Bulky.Models\\Bulky.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hreih\\Source\\Repos\\Bulky\\Bulky\\Bulky.Models\\Bulky.Models.csproj",
+        "projectUniqueName": "C:\\Users\\hreih\\source\\repos\\Bulky\\Bulky\\Bulky.Models\\Bulky.Models.csproj",
         "projectName": "Bulky.Models",
-        "projectPath": "C:\\Users\\hreih\\Source\\Repos\\Bulky\\Bulky\\Bulky.Models\\Bulky.Models.csproj",
+        "projectPath": "C:\\Users\\hreih\\source\\repos\\Bulky\\Bulky\\Bulky.Models\\Bulky.Models.csproj",
         "packagesPath": "C:\\Users\\hreih\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hreih\\Source\\Repos\\Bulky\\Bulky\\Bulky.Models\\obj\\",
+        "outputPath": "C:\\Users\\hreih\\source\\repos\\Bulky\\Bulky\\Bulky.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hreih\\AppData\\Roaming\\NuGet\\NuGet.Config",

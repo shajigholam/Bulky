@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hreih\\Source\\Repos\\Bulky\\Bulky\\BulkyWebRazor_Temp\\BulkyWebRazor_Temp.csproj": {}
+    "C:\\Users\\hreih\\source\\repos\\Bulky\\Bulky\\BulkyWebRazor_Temp\\BulkyWebRazor_Temp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hreih\\Source\\Repos\\Bulky\\Bulky\\BulkyWebRazor_Temp\\BulkyWebRazor_Temp.csproj": {
+    "C:\\Users\\hreih\\source\\repos\\Bulky\\Bulky\\BulkyWebRazor_Temp\\BulkyWebRazor_Temp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hreih\\Source\\Repos\\Bulky\\Bulky\\BulkyWebRazor_Temp\\BulkyWebRazor_Temp.csproj",
+        "projectUniqueName": "C:\\Users\\hreih\\source\\repos\\Bulky\\Bulky\\BulkyWebRazor_Temp\\BulkyWebRazor_Temp.csproj",
         "projectName": "BulkyWebRazor_Temp",
-        "projectPath": "C:\\Users\\hreih\\Source\\Repos\\Bulky\\Bulky\\BulkyWebRazor_Temp\\BulkyWebRazor_Temp.csproj",
+        "projectPath": "C:\\Users\\hreih\\source\\repos\\Bulky\\Bulky\\BulkyWebRazor_Temp\\BulkyWebRazor_Temp.csproj",
         "packagesPath": "C:\\Users\\hreih\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hreih\\Source\\Repos\\Bulky\\Bulky\\BulkyWebRazor_Temp\\obj\\",
+        "outputPath": "C:\\Users\\hreih\\source\\repos\\Bulky\\Bulky\\BulkyWebRazor_Temp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hreih\\AppData\\Roaming\\NuGet\\NuGet.Config",
