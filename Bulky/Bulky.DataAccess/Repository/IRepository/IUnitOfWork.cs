@@ -5,6 +5,7 @@ namespace Bulky.DataAccess.Repository.IRepository
 	{
 		// have all repos
 		ICategoryRepository Category { get; }
+		IProductRepository Product { get; }
 
 		// global method
 		void Save();
