@@ -39,8 +39,10 @@ namespace BulkyWeb.Areas.Admin.Controllers
                 Text = u.Name,
                 Value = u.Id.ToString()
             });
-
+            //ViewBag
             ViewBag.CategoryList = CategoryList;
+            //ViewData
+            //ViewData["CategoryList"]=CategoryList;
 
             // by default passing a new Product obj
             return View();
@@ -133,5 +135,15 @@ namespace BulkyWeb.Areas.Admin.Controllers
  * ViewBag is a dynamic property. any number of properties and values can be assigned to viewbag.
  * the ViewBag's life lasts during the current http request. ViewBag will be null if redirection occurs.
  * ViewBag is actually a wrapper around ViewData.
+ * ViewData
+ * ViewData is derived from ViewDataDictionary which is a dictionary type.
+ * ViewData value must be type cast before use.
+ * ViewData's life lasts during the current http request. ViewBag will be null if redirection occurs.
  * 
+ * ViewBag internally inserts data into viewData dictionary. so the key of ViewData and property of ViewBag must NOT match.
+ * TempData
+ * TempData can be used to store data between between two consecutive requests.
+ * TempData internally use session to store the data. so think of it as a short lived session.
+ * TempData value must be type cast before use. check for null values to avoid run time error.
+ * TempData can be used to store only one time messages like error or validation messages.
  */
