@@ -27,19 +27,21 @@ namespace BulkyWeb.Areas.Admin.Controllers
         {
             // retrive data from Product repository
             List<Product> objProductList = _unitOfWork.Product.GetAll().ToList();
-
-            // projection in EF Core -> dynamic conversion when retrieving data from db(for example here we're selecting 2 colomns from the category & convert it to add it as a new obj with type )
-            IEnumerable<SelectListItem> CategoryList = _unitOfWork.Category.GetAll().Select(u=>new SelectListItem
-            {
-                Text = u.Name,
-                Value=u.Id.ToString()
-            });
             return View(objProductList);
         }
 
         // create a get action method
         public IActionResult Create()
         {
+            // projection in EF Core -> dynamic conversion when retrieving data from db(for example here we're selecting 2 colomns from the category & convert it to add it as a new obj with type )
+            IEnumerable<SelectListItem> CategoryList = _unitOfWork.Category.GetAll().Select(u => new SelectListItem
+            {
+                Text = u.Name,
+                Value = u.Id.ToString()
+            });
+
+            ViewBag.CategoryList = CategoryList;
+
             // by default passing a new Product obj
             return View();
         }
@@ -125,3 +127,11 @@ namespace BulkyWeb.Areas.Admin.Controllers
         }
     }
 }
+/*
+ * ViewBag
+ * ViewBag transfers data from the controller to view, not vice-versa. Ideal for situations in which the temporary data is not a model.
+ * ViewBag is a dynamic property. any number of properties and values can be assigned to viewbag.
+ * the ViewBag's life lasts during the current http request. ViewBag will be null if redirection occurs.
+ * ViewBag is actually a wrapper around ViewData.
+ * 
+ */
