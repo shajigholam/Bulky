@@ -1,13 +1,11 @@
-﻿@model Product
+﻿@* @model Product
 
 <form method="post">
-    @*<input asp-for="Id" hidden />*@
     <div class="border p-3 my-7">
         <div class="row pb-2">
             <h2 class="text-primary">Edit Product</h2>
             <hr />
         </div>
-        @*<div asp-validation-summary="ModelOnly"></div>*@
         <div class="mb-3 row p-1">
             <label asp-for="Title" class="p-0"></label>
             <input asp-for="Title" class="form-control" />
@@ -68,4 +66,4 @@
         //Partial view for js validation is built-in and is in the shared folder(client side validation)
         <partial name="_ValidationScriptsPartial" />
     }
-}
+} *@
