@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -40,9 +41,10 @@ namespace Bulky.Models
         // Add foreign key
         public int CategoryId { get; set; }
         [ForeignKey("CategoryId")]
+        [ValidateNever]
         //navigation prop to the Category table
         public Category Category { get; set; }
-
+        [ValidateNever]
         public string ImageUrl { get; set; }
     }
 }

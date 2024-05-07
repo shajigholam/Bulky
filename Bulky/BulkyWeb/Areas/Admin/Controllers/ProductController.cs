@@ -6,6 +6,7 @@ using Bulky.DataAccess.Data;
 using Bulky.DataAccess.Repository;
 using Bulky.DataAccess.Repository.IRepository;
 using Bulky.Models;
+using Bulky.Models.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
@@ -34,34 +35,51 @@ namespace BulkyWeb.Areas.Admin.Controllers
         public IActionResult Create()
         {
             // projection in EF Core -> dynamic conversion when retrieving data from db(for example here we're selecting 2 colomns from the category & convert it to add it as a new obj with type )
-            IEnumerable<SelectListItem> CategoryList = _unitOfWork.Category.GetAll().Select(u => new SelectListItem
-            {
-                Text = u.Name,
-                Value = u.Id.ToString()
-            });
+            //IEnumerable<SelectListItem> CategoryList = _unitOfWork.Category.GetAll().Select(u => new SelectListItem
+            //{
+            //    Text = u.Name,
+            //    Value = u.Id.ToString()
+            //});
+
             //ViewBag
-            ViewBag.CategoryList = CategoryList;
+            //ViewBag.CategoryList = CategoryList;
             //ViewData
             //ViewData["CategoryList"]=CategoryList;
 
-            // by default passing a new Product obj
+            ProductVM productVM = new()
+            { 
+                CategoryList = _unitOfWork.Category.GetAll().Select(u => new SelectListItem
+                {
+                    Text = u.Name,
+                    Value = u.Id.ToString()
+                }),
+                Product = new Product()
+            };
             return View();
         }
 
         // when hit submit button
         [HttpPost]
-        public IActionResult Create(Product obj)
+        public IActionResult Create(ProductVM productVM)
         {
             if (ModelState.IsValid)
             {
                 // add a new Product obj
-                _unitOfWork.Product.Add(obj);
+                _unitOfWork.Product.Add(productVM.Product);
                 _unitOfWork.Save();
                 TempData["success"] = "Product created successfully!";
                 return RedirectToAction("Index");
             }
-            return View();
-
+            else
+            {
+                // to make sure if we run into any errors, we populate the drop down again
+                productVM.CategoryList = _unitOfWork.Category.GetAll().Select(u => new SelectListItem
+                {
+                    Text = u.Name,
+                    Value = u.Id.ToString()
+                });
+                return View(productVM);
+            }
         }
 
         public IActionResult Edit(int? id)
