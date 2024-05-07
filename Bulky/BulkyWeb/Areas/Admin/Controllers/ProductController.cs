@@ -55,7 +55,7 @@ namespace BulkyWeb.Areas.Admin.Controllers
                 }),
                 Product = new Product()
             };
-            return View();
+            return View(productVM);
         }
 
         // when hit submit button
