@@ -125,39 +125,6 @@ namespace BulkyWeb.Areas.Admin.Controllers
                 return View(productVM);
             }
         }
-
-        //public IActionResult Edit(int? id)
-        //{
-        //    if (id == null || id == 0)
-        //    {
-        //        return NotFound();
-        //    }
-        //    Product? categoryFromDb = _unitOfWork.Product.Get(u => u.Id == id);
-
-        //    if (categoryFromDb == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    return View(categoryFromDb);
-        //}
-
-        //// when hit submit button
-        //[HttpPost]
-        //public IActionResult Edit(Product obj)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        // update the Product obj
-        //        _unitOfWork.Product.Update(obj);
-        //        _unitOfWork.Save();
-        //        TempData["success"] = "Product updated successfully!";
-        //        return RedirectToAction("Index");
-        //    }
-        //    return View();
-
-        //}
-
         public IActionResult Delete(int? id)
         {
             if (id == null || id == 0)
@@ -189,6 +156,15 @@ namespace BulkyWeb.Areas.Admin.Controllers
             TempData["success"] = "Product deleted successfully!";
             return RedirectToAction("Index");
         }
+
+        #region API CALLS
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            List<Product> objProductList = _unitOfWork.Product.GetAll(includeProperties: "Category").ToList();
+            return Json(new { data = objProductList });
+        }
+        #endregion
     }
 }
 /*
@@ -209,3 +185,35 @@ namespace BulkyWeb.Areas.Admin.Controllers
  * TempData value must be type cast before use. check for null values to avoid run time error.
  * TempData can be used to store only one time messages like error or validation messages.
  */
+
+//public IActionResult Edit(int? id)
+//{
+//    if (id == null || id == 0)
+//    {
+//        return NotFound();
+//    }
+//    Product? categoryFromDb = _unitOfWork.Product.Get(u => u.Id == id);
+
+//    if (categoryFromDb == null)
+//    {
+//        return NotFound();
+//    }
+
+//    return View(categoryFromDb);
+//}
+
+//// when hit submit button
+//[HttpPost]
+//public IActionResult Edit(Product obj)
+//{
+//    if (ModelState.IsValid)
+//    {
+//        // update the Product obj
+//        _unitOfWork.Product.Update(obj);
+//        _unitOfWork.Save();
+//        TempData["success"] = "Product updated successfully!";
+//        return RedirectToAction("Index");
+//    }
+//    return View();
+
+//}
