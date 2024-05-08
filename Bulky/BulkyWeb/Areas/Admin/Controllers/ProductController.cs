@@ -82,14 +82,14 @@ namespace BulkyWeb.Areas.Admin.Controllers
                 if (file != null)
                 {
                     string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
-                    string productPath = Path.Combine(wwwRootPath, @"image/product");
+                    string productPath = Path.Combine(wwwRootPath, @"images\product");
 
                     //save
                     using(var fileStream = new FileStream(Path.Combine(productPath, fileName),FileMode.Create))
                     {
                         file.CopyTo(fileStream);
                     }
-                    productVM.Product.ImageUrl = @"\image\product\" + fileName;
+                    productVM.Product.ImageUrl = @"\images\product\" + fileName;
                 }
                 // add a new Product obj
                 _unitOfWork.Product.Add(productVM.Product);
