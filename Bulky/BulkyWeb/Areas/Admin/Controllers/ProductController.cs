@@ -9,6 +9,7 @@ using Bulky.Models;
 using Bulky.Models.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Routing.Constraints;
 
 namespace BulkyWeb.Areas.Admin.Controllers
 {
@@ -17,11 +18,14 @@ namespace BulkyWeb.Areas.Admin.Controllers
     {
         // injecting IUnitOfWork, which acts as a higher-level abstraction that encapsulates one or more repositories.
         private readonly IUnitOfWork _unitOfWork;
+        // to access wwwroot
+        private readonly IWebHostEnvironment _webHostEnvironment;
         // asking dependancy injection to provide the impl
-        public ProductController(IUnitOfWork unitOfWork)
+        public ProductController(IUnitOfWork unitOfWork, IWebHostEnvironment webHostEnvironment)
         {
             // getting the implementation of IUnitOfWork and assign it to local var
             _unitOfWork = unitOfWork;
+            _webHostEnvironment = webHostEnvironment;
         }
 
         public IActionResult Index()
@@ -74,6 +78,19 @@ namespace BulkyWeb.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
+                string wwwRootPath = _webHostEnvironment.WebRootPath;
+                if (file != null)
+                {
+                    string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
+                    string productPath = Path.Combine(wwwRootPath, @"image/product");
+
+                    //save
+                    using(var fileStream = new FileStream(Path.Combine(productPath, fileName),FileMode.Create))
+                    {
+                        file.CopyTo(fileStream);
+                    }
+                    productVM.Product.ImageUrl = @"\image\product\" + fileName;
+                }
                 // add a new Product obj
                 _unitOfWork.Product.Add(productVM.Product);
                 _unitOfWork.Save();
