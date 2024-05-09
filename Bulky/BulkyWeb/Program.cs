@@ -1,7 +1,8 @@
-﻿using Bulky.DataAccess.Data;
+using Bulky.DataAccess.Data;
 using Bulky.DataAccess.Repository;
 using Bulky.DataAccess.Repository.IRepository;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,8 @@ builder.Services.AddControllersWithViews();
 // DbContext Configuration - when we want to add the entity framework to the proj - and determining that we're using sql server
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ApplicationDbContext>();
 
 // Add UnitOfWork in the dependency inj - using add scoped lifetime(for 1 request it will use the same service)
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
