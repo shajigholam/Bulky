@@ -116,6 +116,7 @@ namespace Bulky.DataAccess.Data
                     ImageUrl = ""
                 }
                 );
+            //after installing identity package, add related tables by add-migration addIdentityTables then update-database
         }
     }
 }
