@@ -125,37 +125,6 @@ namespace BulkyWeb.Areas.Admin.Controllers
                 return View(productVM);
             }
         }
-        public IActionResult Delete(int? id)
-        {
-            if (id == null || id == 0)
-            {
-                return NotFound();
-            }
-            Product? productFromDb = _unitOfWork.Product.Get(u => u.Id == id);
-
-            if (productFromDb == null)
-            {
-                return NotFound();
-            }
-
-            return View(productFromDb);
-        }
-
-        [HttpPost, ActionName("Delete")]
-        // we cannot use the same delete name as we have the same name and parameter for the prev method. instead we give it an action name to be found correctly
-        public IActionResult DeletePost(int? id)
-        {
-            Product? obj = _unitOfWork.Product.Get(u => u.Id == id);
-            if (obj == null)
-            {
-                return NotFound();
-            }
-            // delete the Product obj
-            _unitOfWork.Product.Remove(obj);
-            _unitOfWork.Save();
-            TempData["success"] = "Product deleted successfully!";
-            return RedirectToAction("Index");
-        }
 
         #region API CALLS
         [HttpGet]
@@ -164,9 +133,30 @@ namespace BulkyWeb.Areas.Admin.Controllers
             List<Product> objProductList = _unitOfWork.Product.GetAll(includeProperties: "Category").ToList();
             return Json(new { data = objProductList });
         }
+        [HttpDelete]
+        public IActionResult Delete(int? id)
+        {
+            var productToBeDeleted = _unitOfWork.Product.Get(u => u.Id == id);
+            if (productToBeDeleted == null) 
+            {
+                return Json(new { success = false, message = "Error while deleting" });
+            }
+            // delete the old one
+            var oldImagePath = Path.Combine(_webHostEnvironment.WebRootPath, productToBeDeleted.ImageUrl.TrimStart('\\'));
+
+            if (System.IO.File.Exists(oldImagePath))
+            {
+                System.IO.File.Delete(oldImagePath);
+            }
+            _unitOfWork.Product.Remove(productToBeDeleted);
+            _unitOfWork.Save();
+            return Json(new { success = true, message = "Delete Successfully" });
+        }
         #endregion
     }
 }
+
+
 /*
  * ViewBag
  * ViewBag transfers data from the controller to view, not vice-versa. Ideal for situations in which the temporary data is not a model.
@@ -215,5 +205,36 @@ namespace BulkyWeb.Areas.Admin.Controllers
 //        return RedirectToAction("Index");
 //    }
 //    return View();
+//}
 
+//public IActionResult Delete(int? id)
+//{
+//    if (id == null || id == 0)
+//    {
+//        return NotFound();
+//    }
+//    Product? productFromDb = _unitOfWork.Product.Get(u => u.Id == id);
+
+//    if (productFromDb == null)
+//    {
+//        return NotFound();
+//    }
+
+//    return View(productFromDb);
+//}
+
+//[HttpPost, ActionName("Delete")]
+//// we cannot use the same delete name as we have the same name and parameter for the prev method. instead we give it an action name to be found correctly
+//public IActionResult DeletePost(int? id)
+//{
+//    Product? obj = _unitOfWork.Product.Get(u => u.Id == id);
+//    if (obj == null)
+//    {
+//        return NotFound();
+//    }
+//    // delete the Product obj
+//    _unitOfWork.Product.Remove(obj);
+//    _unitOfWork.Save();
+//    TempData["success"] = "Product deleted successfully!";
+//    return RedirectToAction("Index");
 //}

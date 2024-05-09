@@ -1,4 +1,4 @@
-﻿@model Product
+﻿@*@model Product
 
 <form method="post">
     <input asp-for="Id" hidden />
@@ -7,7 +7,6 @@
             <h2 class="text-primary">Delete Product</h2>
             <hr />
         </div>
-        @*<div asp-validation-summary="ModelOnly"></div>*@
         <div class="mb-3 row p-1">
             <label asp-for="Title" class="p-0"></label>
             <input asp-for="Title" disabled class="form-control" />
@@ -60,4 +59,4 @@
         //Partial view for js validation is built-in and is in the shared folder(client side validation)
         <partial name="_ValidationScriptsPartial" />
     }
-}
+}*@
