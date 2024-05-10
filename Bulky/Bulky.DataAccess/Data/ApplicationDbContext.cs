@@ -1,13 +1,12 @@
 ﻿using System;
 using Bulky.Models;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Bulky.DataAccess.Data
 {
 	// DbContext is a built-in root class of entity framework core which we will be accessing entity framework from it
-	public class ApplicationDbContext : IdentityDbContext<IdentityUser>
+	public class ApplicationDbContext : IdentityDbContext
 	{
 		// pass the contection string to DbContext
 		public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
