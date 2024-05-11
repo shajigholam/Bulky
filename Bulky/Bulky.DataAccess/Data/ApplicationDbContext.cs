@@ -1,13 +1,14 @@
 ﻿using System;
 using Bulky.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Bulky.DataAccess.Data
 {
 	// DbContext is a built-in root class of entity framework core which we will be accessing entity framework from it
-	public class ApplicationDbContext : IdentityDbContext
-	{
+	public class ApplicationDbContext : IdentityDbContext<IdentityUser>
+    {
 		// pass the contection string to DbContext
 		public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
 		{
@@ -17,6 +18,8 @@ namespace Bulky.DataAccess.Data
         //create table (dotnet ef migrations add AddCategoryTableToDb)
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
