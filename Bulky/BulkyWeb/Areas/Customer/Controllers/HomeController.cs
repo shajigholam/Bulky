@@ -24,8 +24,14 @@ public class HomeController : Controller
     // use the same para name as asp-route-productId
     public IActionResult Details(int productId)
     {
-        Product product = _unitOfWork.Product.Get(u => u.Id == productId, includeProperties: "Category");
-        return View(product);
+        //Product product = _unitOfWork.Product.Get(u => u.Id == productId, includeProperties: "Category");
+        ShoppingCart cart = new()
+        {
+            Product = _unitOfWork.Product.Get(u => u.Id == productId, includeProperties: "Category"),
+            Count = 1,
+            ProductId = productId
+        };
+        return View(cart);
     }
 
     public IActionResult Privacy()
