@@ -49,14 +49,14 @@ public class HomeController : Controller
         {
             // shopping cart already exists
             cartFromDb.Count += shoppingCart.Count;
-            _unitOfWork.ShoppingCart.Update(cartFromDb);
+            _unitOfWork.ShoppingCart.Update(cartFromDb); // because tracked is set to false when we get the data from db, entity framework is not tracking the retrieved data so we need to use the update
         }
         else
         {
             //  add shopping cart record
             _unitOfWork.ShoppingCart.Add(shoppingCart);
         }
-        
+        TempData["success"] = "Cart updated successfully";
         _unitOfWork.Save();
 
         return RedirectToAction(nameof(Index));
