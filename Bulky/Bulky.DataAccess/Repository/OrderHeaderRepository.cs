@@ -19,6 +19,16 @@ namespace Bulky.DataAccess.Repository
         {
             _db.OrderHeaders.Update(obj);
         }
-    }
+
+		public void UpdateStatue(int id, string orderStatus, string? paymentStatus = null)
+		{
+			var orderFromDb = _db.OrderHeaders.FirstOrDefault(u => u.Id == id);
+		}
+
+		public void UpdateStripePaymentID(int id, string sessionId, string paymentIntentId)
+		{
+			var orderFromDb = _db.OrderHeaders.FirstOrDefault(u => u.Id == id);
+		}
+	}
 }
 
