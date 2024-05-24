@@ -82,16 +82,19 @@ namespace BulkyWeb.Areas.Customer.Controllers
 
             ShoppingCartVM.OrderHeader.OrderDate = System.DateTime.Now;
             ShoppingCartVM.OrderHeader.ApplicationUserId = userId;
+            // we want to populate Orderheader so we shouldn't populate navigation property because it will add all the props from ApplicationUser too(we just want to add a new record of OrderHeader to EF Core)
+            //ShoppingCartVM.OrderHeader.ApplicationUser = _unitOfWork.ApplicationUser.Get(u => u.Id == userId);
 
-            ShoppingCartVM.OrderHeader.ApplicationUser = _unitOfWork.ApplicationUser.Get(u => u.Id == userId);
+			ApplicationUser applicationUser = _unitOfWork.ApplicationUser.Get(u => u.Id == userId);
 
-            foreach (var cart in ShoppingCartVM.ShoppingCartList)
+
+			foreach (var cart in ShoppingCartVM.ShoppingCartList)
             {
                 cart.Price = GetPriceBasedOnQuantity(cart);
                 ShoppingCartVM.OrderHeader.OrderTotal += (cart.Price * cart.Count);
             }
 
-            if(ShoppingCartVM.OrderHeader.ApplicationUser.CompanyId.GetValueOrDefault() == 0)
+            if(applicationUser.CompanyId.GetValueOrDefault() == 0)
             {
                 // it is a regular customer 
                 ShoppingCartVM.OrderHeader.PaymentStatus = SD.PaymentStatusPending;
@@ -120,7 +123,7 @@ namespace BulkyWeb.Areas.Customer.Controllers
                 _unitOfWork.Save();
             }
 
-            if (ShoppingCartVM.OrderHeader.ApplicationUser.CompanyId.GetValueOrDefault() == 0)
+            if (applicationUser.CompanyId.GetValueOrDefault() == 0)
             {
                 // it is a regular customer account and we need to capture payment
                 // stripe logic
