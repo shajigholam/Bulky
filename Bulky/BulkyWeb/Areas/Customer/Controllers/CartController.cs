@@ -4,6 +4,7 @@ using Bulky.Models.ViewModel;
 using Bulky.Utility;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Stripe.Checkout;
 using System.Security.Claims;
 
 namespace BulkyWeb.Areas.Customer.Controllers
@@ -126,29 +127,41 @@ namespace BulkyWeb.Areas.Customer.Controllers
             if (applicationUser.CompanyId.GetValueOrDefault() == 0)
             {
                 // it is a regular customer account and we need to capture payment
+
                 // stripe logic
-                var domain = "";
-                var options = new Stripe.Checkout.SessionCreateOptions
+                var domain = "https://localhost:7252/";
+                var options = new SessionCreateOptions
                 {
                     SuccessUrl = domain + $"customer/cart/OrderConfirmation?id{ShoppingCartVM.OrderHeader.Id}",
                     CancelUrl= domain + "customer/cart/index",
-                    LineItems = new List<Stripe.Checkout.SessionLineItemOptions>
-                    {
-                        new Stripe.Checkout.SessionLineItemOptions
-                        {
-                            Price = "price_1MotwRLkdIwHu7ixYcPLm5uZ",
-                            Quantity = 2,
-                        },
-                    },
+                    LineItems = new List<SessionLineItemOptions>(),
                     Mode = "payment",
                 };
 
                 foreach (var item in ShoppingCartVM.ShoppingCartList)
                 {
-                    //var sessionLineItem = new sessi
+                    var sessionLineItem = new SessionLineItemOptions
+                    {
+                        PriceData = new SessionLineItemPriceDataOptions
+                        {
+                            UnitAmount = (long)(item.Price * 100), // $20.50 => 2050
+                            Currency = "CAD",
+                            ProductData = new SessionLineItemPriceDataProductDataOptions
+                            {
+                                Name = item.Product.Title
+                            }
+                        },
+                        Quantity = item.Count
+                    };
+                    options.LineItems.Add(sessionLineItem);
                 }
-                var service = new Stripe.Checkout.SessionService();
-                service.Create(options);
+                var service = new SessionService();
+                Session session = service.Create(options);
+                _unitOfWork.OrderHeader.UpdateStripePaymentID(ShoppingCartVM.OrderHeader.Id, session.Id, session.PaymentIntentId);
+                _unitOfWork.Save();
+                Response.Headers.Add("Location", session.Url);
+                return new StatusCodeResult(303);
+                // use all 4 & 2 to test the session
             }
 
             return RedirectToAction(nameof(OrderConfirmation), new { id = ShoppingCartVM.OrderHeader.Id });
