@@ -127,6 +127,28 @@ namespace BulkyWeb.Areas.Customer.Controllers
             {
                 // it is a regular customer account and we need to capture payment
                 // stripe logic
+                var domain = "";
+                var options = new Stripe.Checkout.SessionCreateOptions
+                {
+                    SuccessUrl = domain + $"customer/cart/OrderConfirmation?id{ShoppingCartVM.OrderHeader.Id}",
+                    CancelUrl= domain + "customer/cart/index",
+                    LineItems = new List<Stripe.Checkout.SessionLineItemOptions>
+                    {
+                        new Stripe.Checkout.SessionLineItemOptions
+                        {
+                            Price = "price_1MotwRLkdIwHu7ixYcPLm5uZ",
+                            Quantity = 2,
+                        },
+                    },
+                    Mode = "payment",
+                };
+
+                foreach (var item in ShoppingCartVM.ShoppingCartList)
+                {
+                    //var sessionLineItem = new sessi
+                }
+                var service = new Stripe.Checkout.SessionService();
+                service.Create(options);
             }
 
             return RedirectToAction(nameof(OrderConfirmation), new { id = ShoppingCartVM.OrderHeader.Id });
