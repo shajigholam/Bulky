@@ -2,6 +2,7 @@
 using Bulky.Models;
 using Bulky.Models.ViewModel;
 using Bulky.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -30,6 +31,12 @@ namespace BulkyWeb.Areas.Admin.Controllers
                 OrderDetail = _unitOfWork.OrderDetail.GetAll(u => u.OrderHeaderId == orderId, includeProperties: "Product")
             };
             return View(orderVM);
+        }
+        [HttpPost]
+        [Authorize(Roles = SD.Role_Admin+","+SD.Role_Employee)]
+        public IActionResult UpdateOrderDetail()
+        {
+            return View();
         }
 
 
