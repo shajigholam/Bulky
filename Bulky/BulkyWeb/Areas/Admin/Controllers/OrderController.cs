@@ -11,6 +11,7 @@ using System.Diagnostics;
 namespace BulkyWeb.Areas.Admin.Controllers
 {
     [Area("admin")]
+    [Authorize]
     public class OrderController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -62,6 +63,18 @@ namespace BulkyWeb.Areas.Admin.Controllers
             TempData["Success"] = "Order Details Updated Successfully.";
 
             return RedirectToAction(nameof(Details), new {orderId= orderHeaderFromDb.Id} );
+        }
+
+        [HttpPost]
+        [Authorize(Roles = SD.Role_Admin + "," + SD.Role_Employee)]
+        public IActionResult StartProcessing()
+        {
+            _unitOfWork.OrderHeader.UpdateStatue(OrderVM.OrderHeader.Id, SD.StatusInProcess);
+            _unitOfWork.Save();
+
+            TempData["Success"] = "Order Details Updated Successfully.";
+
+            return RedirectToAction(nameof(Details), new { orderId = OrderVM.OrderHeader.Id });
         }
 
 
