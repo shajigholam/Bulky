@@ -99,6 +99,18 @@ namespace BulkyWeb.Areas.Admin.Controllers
             return RedirectToAction(nameof(Details), new { orderId = OrderVM.OrderHeader.Id });
         }
 
+        [HttpPost]
+        [Authorize(Roles = SD.Role_Admin + "," + SD.Role_Employee)]
+        public IActionResult CancelOrder()
+        {
+            var orderHeader = _unitOfWork.OrderHeader.Get(u => u.Id == OrderVM.OrderHeader.Id);
+            if (orderHeader.PaymentStatus==SD.)
+            {
+                
+            }
+
+            return
+        }
 
         #region API CALLS
         [HttpGet]
