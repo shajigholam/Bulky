@@ -4,6 +4,7 @@ using Bulky.Models;
 using Bulky.DataAccess.Repository.IRepository;
 using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
+using Bulky.Utility;
 
 namespace BulkyWeb.Areas.Customer.Controllers;
 [Area("Customer")]
@@ -50,14 +51,17 @@ public class HomeController : Controller
             // shopping cart already exists
             cartFromDb.Count += shoppingCart.Count;
             _unitOfWork.ShoppingCart.Update(cartFromDb); // because tracked is set to false when we get the data from db, entity framework is not tracking the retrieved data so we need to use the update
+            _unitOfWork.Save();
         }
         else
         {
             //  add shopping cart record
             _unitOfWork.ShoppingCart.Add(shoppingCart);
+            _unitOfWork.Save();
+            HttpContext.Session.SetInt32(SD.SessionCart, _unitOfWork.ShoppingCart.GetAll(u => u.ApplicationUserId == userId).Count());
         }
         TempData["success"] = "Cart updated successfully";
-        _unitOfWork.Save();
+        
 
         return RedirectToAction(nameof(Index));
     }
