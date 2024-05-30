@@ -16,7 +16,7 @@ using Microsoft.AspNetCore.Routing.Constraints;
 namespace BulkyWeb.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    //[Authorize(Roles = SD.Role_Admin)]
+    [Authorize(Roles = SD.Role_Admin)]
 
     public class CompanyController : Controller
     {
