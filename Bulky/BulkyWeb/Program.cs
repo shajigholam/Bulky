@@ -43,7 +43,7 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 
-builder.Services.AddScoped<IDbInitializer, IDbInitializer>(); //every time the program restart
+builder.Services.AddScoped<IDbInitializer, DbInitializer>(); 
 
 builder.Services.AddRazorPages();
 // Add UnitOfWork in the dependency inj - using add scoped lifetime(for 1 request it will use the same service)
@@ -69,7 +69,7 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseSession();
-SeedDatabase();
+SeedDatabase(); //every time the program restart
 app.MapRazorPages();
 app.MapControllerRoute(
     name: "default",
