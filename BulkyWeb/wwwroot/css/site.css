@@ -101,7 +101,13 @@ bg-success {
     border-color: #425F4B !important;
 }
 
-
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 20px;
+}
 
 /* btn-outline-primary */
 
